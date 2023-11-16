@@ -48,6 +48,7 @@
             echo "<th class='p-2 border border-gray-300'>Prix</th>";
             echo "<th class='p-2 border border-gray-300'>Date de publication</th>";
             echo "<th class='p-2 border border-gray-300'>Image</th>";
+            echo "<th class='p-2 border border-gray-300'>Action</th>";
             echo "</tr>";
             echo "</thead>";
             echo "<tbody>";
@@ -60,6 +61,10 @@
                 echo "<td class='p-2 border border-gray-300'>" . $row["prix"] . " Dirhams</td>";
                 echo "<td class='p-2 border border-gray-300'>" . $row["date_publication"] . "</td>";
                 echo "<td class='p-2 border border-gray-300'><img src='" . $row["image_url"] . "' alt='Image de l'annonce' class='w-16 h-16'></td>";
+                echo "<td class='p-2 border border-gray-300'>
+                        <a href='edit.php?id=" . $row["id"] . "'>Modifier</a> |
+                        <a href='delete.php?id=" . $row["id"] . "'>Supprimer</a>
+                    </td>";
                 echo "</tr>";
             }
 
