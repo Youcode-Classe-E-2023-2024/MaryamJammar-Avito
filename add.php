@@ -33,7 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Exécuter la requête
     if ($conn->query($sql) === TRUE) {
-        echo "Annonce ajoutée avec succès.";
+        // Annonce ajoutée avec succès, rediriger vers la page index avec un paramètre de succès
+        header("Location: index.php?success=1");
+        exit();
     } else {
         echo "Erreur lors de l'ajout de l'annonce : " . $conn->error;
     }
@@ -41,4 +43,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Fermer la connexion
     $conn->close();
 }
-?>
