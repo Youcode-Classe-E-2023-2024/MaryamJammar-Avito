@@ -10,7 +10,17 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body >
+<style>
+        .background-image {
+            width: 100%;
+            height: 600px;
+            background-image: url('images/bg2.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    </style>
 
     <div class=" mt-4 w-full p-6 ">
         <div class="flex justify-around items-center p-4">
@@ -35,7 +45,7 @@
         </div>
 
 
-        <div class="relative overflow-x-auto">
+        <div class="relative overflow-x-auto ">
             <table class="w-4/6 mx-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
@@ -47,7 +57,7 @@
                         <th scope="col" class="px-6 py-3 rounded-tr-lg">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="bg-white">
 
                     <?php
                     require_once 'connection.php';
@@ -99,7 +109,7 @@
 
                 </tbody>
             </table>
-            <div class="mt-4 flex justify-center items-center">
+            <div class="mt-4 flex justify-center items-center ">
                 <?php
                 $sqlCount = "SELECT COUNT(*) AS total FROM annonces";
                 $resultCount = $conn->query($sqlCount);
@@ -109,11 +119,11 @@
 
                 // Check if there's more than one page
                 if ($totalPages > 1) {
-                    echo "<nav class='block'>";
-                    echo "<ul class='flex pl-0 rounded list-none flex-wrap'>";
+                    echo "<nav class='block '>";
+                    echo "<ul class='flex pl-0 rounded list-none flex-wrap '>";
                     for ($i = 1; $i <= $totalPages; $i++) {
                         $active = ($i == $currentPage) ? 'bg-gray-200' : '';
-                        echo "<li class='relative block py-2 px-3 ml-2 leading-tight border {$active}'>";
+                        echo "<li class='relative block py-2 px-3 ml-2 bg-white leading-tight border {$active}'>";
                         echo "<a href='?page={$i}' class='page-link'>{$i}</a>";
                         echo "</li>";
                     }

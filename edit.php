@@ -8,8 +8,17 @@
     <title>Modifier une Annonce</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body> 
-
+<body class="background-image">
+    <style>
+        .background-image {
+            width: 100%;
+            height: 400px;
+            background-image: url('images/image2.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    </style>
 <?php
 require_once 'connection.php';
 
