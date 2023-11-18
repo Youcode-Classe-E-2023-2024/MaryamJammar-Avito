@@ -33,7 +33,7 @@ Cas d'utilisation :
 
 ## 2. Diagramme de Classes
 
-![Diagramme de Classes]![image](https://github.com/Youcode-Classe-E-2023-2024/MaryamJammar-Avito/assets/132862036/799e2cb0-ff74-4af2-a15b-08df97ce6c08)
+![Diagramme de Classes]![image](https://github.com/Youcode-Classe-E-2023-2024/MaryamJammar-Avito/assets/132862036/9d3ec99d-c200-4c13-b676-f61bb37d9485)
 
 
 Le diagramme de classes modélise les différentes entités et leurs relations dans le système Avito.
