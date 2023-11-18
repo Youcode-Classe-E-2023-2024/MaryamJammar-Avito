@@ -16,8 +16,8 @@ Le projet est organisé en plusieurs étapes :
 
 ## 1. Diagramme de Cas d'Utilisation
 
-![Diagramme de Cas d'Utilisation]("![usecase_diagram](https://github.com/Youcode-Classe-E-2023-2024/MaryamJammar-Avito/assets/132862036/1f69af98-c24d-4f2d-b35e-bdb32ca3fb32)
-")
+![Diagramme de Cas d'Utilisation]![image](https://github.com/Youcode-Classe-E-2023-2024/MaryamJammar-Avito/assets/132862036/914aa01a-a499-4cdb-90af-647abaa13362)
+
 
 Le diagramme de cas d'utilisation représente les interactions entre les acteurs et les différentes fonctionnalités du système Avito.
 
@@ -33,7 +33,8 @@ Cas d'utilisation :
 
 ## 2. Diagramme de Classes
 
-![Diagramme de Classes]("C:\Users\youco\Desktop\uml\diagramme_classe.png")
+![Diagramme de Classes]![image](https://github.com/Youcode-Classe-E-2023-2024/MaryamJammar-Avito/assets/132862036/799e2cb0-ff74-4af2-a15b-08df97ce6c08)
+
 
 Le diagramme de classes modélise les différentes entités et leurs relations dans le système Avito.
 
