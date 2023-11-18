@@ -16,55 +16,78 @@ Le projet est organisé en plusieurs étapes :
 
 ## 1. Diagramme de Cas d'Utilisation
 
-![Diagramme de Cas d'Utilisation](path/to/your/use_case_diagram.png)
+![Diagramme de Cas d'Utilisation]("C:\Users\youco\Desktop\uml\usecase_diagram.png")
 
-. Diagramme de Cas d'Utilisation
 Le diagramme de cas d'utilisation représente les interactions entre les acteurs et les différentes fonctionnalités du système Avito.
 
 Acteurs :
 Utilisateur
 
 Cas d'utilisation :
-Consulter les annonces : Les utilisateurs peuvent consulter les annonces disponibles.
-Ajouter une annonce : Les utilisateurs peuvent ajouter de nouvelles annonces.
-Modifier une annonce : Les utilisateurs peuvent modifier les annonces.
-Supprimer une annonce : Les utilisateurs peuvent supprimer les annonces.
+  +Consulter les annonces : Les utilisateurs peuvent consulter les annonces disponibles.
+  +Ajouter une annonce : Les utilisateurs peuvent ajouter de nouvelles annonces.
+  +Modifier une annonce : Les utilisateurs peuvent modifier les annonces.
+  +Supprimer une annonce : Les utilisateurs peuvent supprimer les annonces.
 
 
 ## 2. Diagramme de Classes
 
-![Diagramme de Classes](path/to/your/class_diagram.png)
+![Diagramme de Classes]("C:\Users\youco\Desktop\uml\diagramme_classe.png")
 
 Le diagramme de classes modélise les différentes entités et leurs relations dans le système Avito.
 
 Classes :
-Annonce
-Utilisateur
+  .Annonce
+  .Utilisateur
 
 Relations :
-
-Un utilisateur peut ajouter plusieurs annonces.
-Une annonce est creer par un seul utilisateur.
+  Un utilisateur peut ajouter plusieurs annonces.
+  Une annonce est creer par un seul utilisateur.
 
 ## 3. Initialisation de la Base de Données
 
 ### Schéma de la Base de Données
 
 Description de la Base de Données Avito :
-
-La base de données Avito est conçue pour stocker les informations relatives aux utilisateurs et aux annonces. Elle comporte trois tables principales : Utilisateurs, Annonces, et Categories.
+La base de données Avito est conçue pour stocker les informations relatives aux utilisateurs et aux annonces. Elle comporte deux tables principales : Utilisateurs et Annonces.
 
 Table Utilisateurs :
-id_utilisateur (INT, Clé primaire) : Identifiant unique de l'utilisateur.
-nom (VARCHAR(255)) : Nom de l'utilisateur.
+id (INT, Clé primaire) : Identifiant unique de l'utilisateur.
+username (VARCHAR(255)) : Nom de l'utilisateur.
+password (VARCHAR(255)) : mot de passe de l'utilisateur.
 email (VARCHAR(255)) : Adresse e-mail de l'utilisateur.
+phone (int(10)) : tel de l'utilisateur.
 
 Table Annonces :
-id_annonce (INT, Clé primaire) : Identifiant unique de l'annonce.
-titre (VARCHAR(255)) : Titre de l'annonce.
-description (TEXT) : Description détaillée de l'annonce.
-id_utilisateur (INT, Clé étrangère vers Utilisateurs) : Référence à l'utilisateur qui a créé l'annonce.
-id_categorie (INT, Clé étrangère vers Categories) : Référence à la catégorie à laquelle appartient l'annonce.
-t de stocker de manière efficace les informations nécessaires pour gérer les utilisateurs, les annonces, et les catégories sur le site Avito. N'oubliez pas d'ajuster cette structure en fonction des besoins spécifiques de votre application.
+- id (INT, Clé primaire) : Identifiant unique de l'annonce.
+- titre (VARCHAR(255)) : Titre de l'annonce.
+- description (VARCHAR(255)) : Description détaillée de l'annonce.
+- prix (DECIMAL(10, 2)) : Prix de l'annonce.
+- date_publication (date) : Date de publication de l'annonce.
+- image_url (VARCHAR(255)) : URL de l'image associée à l'annonce.
+- id_utilisateur (INT, Clé étrangère vers Utilisateurs) : Référence à l'utilisateur qui a créé l'annonce.
+
+Le script annonces.sql initialise la base de données avec les tables nécessaires. 
+
+## 4. Insertion de Données
+Le formulaire d'insertion de données permet aux utilisateurs  d'ajouter de nouvelles annonces.
+Pour ajouter une nouvelle annonce, suivez ces étapes :
+
+1-Accédez à la page d'ajout d'annonces.
+2-Remplissez le formulaire avec les détails de votre annonce.
+3-Soumettez le formulaire.
+
+Le formulaire d'insertion de données est disponible à l'adresse /create.php. Utilisez ce formulaire pour ajouter de nouvelles annonces à la base de données.
+
+
+## 5. Lecture de Données
+Le code de lecture de données permet de récupérer des annonces en fonction de certains critères.
+Pour afficher la liste des annonces, suivez ces étapes :
+
+1-Accédez à la page de liste des annonces.
+2-Les annonces sont récupérées de la base de données.
+3-Elles sont affichées sous forme de tableau sur la page.
+
+Le script index.php récupère et affiche toutes les annonces de la base de données.
 
 
